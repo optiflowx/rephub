@@ -32,7 +32,6 @@ class FacilityItem extends StatelessWidget {
             ),
             child: Icon(
               switch (facility.type) {
-                FacilityType.publicClinic ||
                 FacilityType.mediClinic ||
                 FacilityType.privateClinic =>
                   HugeIcons.strokeRoundedClinic,

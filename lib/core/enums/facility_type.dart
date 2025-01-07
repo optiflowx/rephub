@@ -37,12 +37,6 @@ enum FacilityType {
     borderColor: Colors.purpleAccent,
     icon: Icons.local_hospital,
   ),
-  publicClinic(
-    name: 'Public Clinic',
-    color: Colors.yellow,
-    borderColor: Colors.amber,
-    icon: Icons.local_hospital,
-  ),
   mediClinic(
     name: 'Medi-Clinic',
     color: Colors.cyan,

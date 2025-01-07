@@ -25,7 +25,7 @@ class ResizableTabButton extends StatelessWidget {
         duration: const Duration(milliseconds: 300),
         padding: EdgeInsets.symmetric(horizontal: isActive ? 10 : 20),
         decoration: BoxDecoration(
-          color: isActive ? tab.color : Colors.grey,
+          color: tab.color,
           borderRadius: BorderRadius.circular(20),
         ),
         child: Row(
@@ -33,7 +33,7 @@ class ResizableTabButton extends StatelessWidget {
           children: [
             Icon(
               tab.icon,
-              color: isActive ? Colors.white : Colors.grey,
+              color: Colors.white,
             ),
             if (isActive)
               Padding(
