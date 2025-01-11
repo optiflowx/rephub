@@ -4,26 +4,30 @@ import 'package:rephub/core/enums/facility_type.dart';
 class ResizableTabButton extends StatelessWidget {
   const ResizableTabButton({
     required this.tab,
-    required this.activeTab,
+    required this.isActive,
     required this.onTabSelected,
+    this.isBeforeActive = false,
+    this.isAfterActive = false,
     super.key,
   });
 
   final FacilityType tab;
-  final FacilityType activeTab;
+  final bool isActive;
+  final bool isBeforeActive;
+  final bool isAfterActive;
   final void Function(FacilityType) onTabSelected;
 
   @override
   Widget build(BuildContext context) {
-    final isActive = activeTab == tab;
-
     return GestureDetector(
-      onTap: () {
-        onTabSelected(tab);
-      },
+      onTap: () => onTabSelected(tab),
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 300),
-        padding: EdgeInsets.symmetric(horizontal: isActive ? 10 : 20),
+        margin: const EdgeInsets.symmetric(horizontal: 4),
+        padding: EdgeInsets.symmetric(
+          horizontal: isActive ? 10 : 20,
+          vertical: 14,
+        ),
         decoration: BoxDecoration(
           color: tab.color,
           borderRadius: BorderRadius.circular(20),

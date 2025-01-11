@@ -21,7 +21,7 @@ class MedicalFacilityTabBar extends StatelessWidget {
         children: FacilityType.values.map((tab) {
           return ResizableTabButton(
             tab: tab,
-            activeTab: filterValue,
+            isActive: filterValue == tab,
             onTabSelected: onFilterChanged,
           );
         }).toList(),

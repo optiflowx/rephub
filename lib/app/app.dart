@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rephub/app/routes/app_router.dart';
+import 'package:rephub/app/services/system_ui_service.dart';
 import 'package:rephub/app/theme/theme.dart';
-import 'package:rephub/app/ui/system_ui_service.dart';
 import 'package:rephub/main.dart';
 
 class App extends StatefulWidget {
@@ -23,6 +23,9 @@ class _AppState extends State<App> {
     return MaterialApp.router(
       theme: AppTheme.light,
       darkTheme: AppTheme.dark,
+      // showPerformanceOverlay: true,
+      // showSemanticsDebugger: true,
+      debugShowCheckedModeBanner: false,
       scaffoldMessengerKey: scaffoldMessengerKey,
       title: 'RepHub - Medical Representative App',
       routerDelegate: AppRouter.router.routerDelegate,

@@ -5,17 +5,17 @@ class AppTypography {
   AppTypography._();
 
   static final textTheme = TextTheme(
-    titleSmall: GoogleFonts.montserrat(
+    titleSmall: GoogleFonts.inter(
       fontSize: 18,
       fontWeight: FontWeight.w700,
     ),
-    titleMedium: GoogleFonts.montserrat(
+    titleMedium: GoogleFonts.inter(
       fontSize: 24,
       fontWeight: FontWeight.w700,
     ),
-    titleLarge: GoogleFonts.montserrat(
+    titleLarge: GoogleFonts.inter(
       fontSize: 32,
-      fontWeight: FontWeight.w700,
+      fontWeight: FontWeight.w900,
     ),
     bodySmall: GoogleFonts.inter(
       fontSize: 14,
